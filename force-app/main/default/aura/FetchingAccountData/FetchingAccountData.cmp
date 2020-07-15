@@ -1,0 +1,12 @@
+<aura:component controller="CreateRecordLightning">
+    <aura:attribute name="accName" type="String"/>
+    <aura:attribute name="accList" type="Account[]"/>
+
+    <lightning:input type="String" value="{!v.accName}" label="Enter Customer Name: "/>
+    <aura:iteration var="accounts" items="{!v.accList}"> 
+        <p>{!accounts.Name} : {!accounts.Rating} : {!accounts.Phone} : {!accounts.AccountNumber}</p>
+    </aura:iteration> <br/> <br/>
+
+    <lightning:button label="Get Account Name" onclick="{!c.getAccount}" variant="brand"/>
+
+</aura:component>

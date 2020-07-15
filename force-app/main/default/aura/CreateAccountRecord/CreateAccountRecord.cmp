@@ -1,0 +1,11 @@
+<aura:component controller="CreateRecordLightning" description="Account Creation">
+    <aura:attribute name="accname" type="String"/>
+    <aura:attribute name="rating" type="String"/>
+    <aura:attribute name="phone"  type="String"/>
+
+    <lightning:input type="String" value="{!v.accname}" label="Account Name: " required="true"/>
+    <lightning:input type="String" value="{!v.rating}" label="Account Rating: " required="true"/>
+    <lightning:input type="Integer" value="{!v.phone}" label="Phone Number: " required="true"/>
+
+    <lightning:button label="Submit" onclick="{!c.crtAccnt}"/>
+</aura:component>	
